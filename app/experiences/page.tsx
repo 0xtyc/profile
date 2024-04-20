@@ -1,7 +1,15 @@
+'use client'
 import experiencesData from '@/data/experiencesData'
 import siteMetadata from '@/data/siteMetadata'
+import { useState } from 'react'
 
 export default function ExperiencesPage() {
+  const [views, setViews] = useState(experiencesData.map(() => false))
+  const toggleView = (i: number) => {
+    const newViews = [...views]
+    newViews[i] = !newViews[i]
+    setViews(newViews)
+  }
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -35,17 +43,31 @@ export default function ExperiencesPage() {
                         {exp.descriptions.map((desc, i) => (
                           <p key={i}>{desc}</p>
                         ))}
+                        {views[i] &&
+                          exp.details?.length &&
+                          exp.details.map((detail, i) => <p key={i}>{detail}</p>)}
                       </div>
-                      <div>
-                        {exp.keywords?.map((keyword, i) => (
-                          <span
-                            key={i}
-                            className="m-1 rounded-xl bg-gray-300 bg-opacity-40 px-4 py-1 text-gray-600  dark:text-gray-200"
-                          >
-                            {keyword}
-                          </span>
-                        ))}
+                      <div
+                        onClick={() => toggleView(i)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') toggleView(i)
+                        }}
+                        tabIndex={0}
+                        role="button"
+                        className="cursor-pointer text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      >
+                        {!views[i] ? 'Behind the Scnenes' : "Don't Care"}
                       </div>
+                    </div>
+                    <div className="flex w-fit max-w-fit flex-wrap">
+                      {exp.keywords?.map((keyword, i) => (
+                        <span
+                          key={i}
+                          className="m-1 rounded-xl bg-gray-300 bg-opacity-40 px-4 py-1 text-gray-600  dark:text-gray-200"
+                        >
+                          {keyword}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
