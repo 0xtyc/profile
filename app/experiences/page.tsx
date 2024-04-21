@@ -2,6 +2,7 @@
 import experiencesData from '@/data/experiencesData'
 import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function ExperiencesPage() {
   const [views, setViews] = useState(experiencesData.map(() => false))
@@ -43,21 +44,37 @@ export default function ExperiencesPage() {
                         {exp.descriptions.map((desc, i) => (
                           <p key={i}>{desc}</p>
                         ))}
-                        {views[i] &&
-                          exp.details?.length &&
-                          exp.details.map((detail, i) => <p key={i}>{detail}</p>)}
+                        {views[i] && exp.meme && (
+                          <div className="flex flex-col">
+                            <Image
+                              src={exp.meme}
+                              alt="Behind the Scenes"
+                              width={300}
+                              height={300}
+                              className="mb-0"
+                            />
+                            <a
+                              href={exp.src}
+                              className="dark: mt-0 text-xs text-gray-200 dark:text-gray-700"
+                            >
+                              via GIPHY
+                            </a>
+                          </div>
+                        )}
                       </div>
-                      <div
-                        onClick={() => toggleView(i)}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter') toggleView(i)
-                        }}
-                        tabIndex={0}
-                        role="button"
-                        className="cursor-pointer text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                      >
-                        {!views[i] ? 'Behind the Scnenes' : "Don't Care"}
-                      </div>
+                      {exp.meme && (
+                        <div
+                          onClick={() => toggleView(i)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') toggleView(i)
+                          }}
+                          tabIndex={0}
+                          role="button"
+                          className="cursor-pointer text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                        >
+                          {!views[i] ? 'Behind the Scnenes' : "Don't Care"}
+                        </div>
+                      )}
                     </div>
                     <div className="flex w-fit max-w-fit flex-wrap">
                       {exp.keywords?.map((keyword, i) => (

@@ -2,7 +2,8 @@ interface Experience {
   title: string
   company: string
   descriptions: string[]
-  details?: string[]
+  meme?: string
+  src?: string
   from: string
   to: string
   location: string
@@ -22,10 +23,8 @@ const experiencesData: Experience[] = [
       'Developed a comprehensive intrusion detection system across the backend and frontend',
       'Introduced a device onboarding process to allow users to onboard their own devices without any support',
     ],
-    details: [
-      'Worked in a Swiss startup where I was the only Asian and the only female engineer',
-      'Survived the a 30% layoff and worked as the only frontend engineer for almost a year',
-    ],
+    meme: '/static/gif/decrease.gif',
+    src: 'https://giphy.com/gifs/season-12-the-simpsons-12x9-3o6MbrACMlFCny8zmw',
     keywords: ['React', 'Next.js', 'TypeScript', 'Capacitor', 'PostgreSQL', 'Django'],
   },
 
@@ -35,15 +34,13 @@ const experiencesData: Experience[] = [
     from: 'Sep 2019',
     to: 'Nov 2021',
     location: 'Zurich, Switzerland',
+    meme: '/static/gif/lockdown.gif',
     descriptions: [
       'Enrolled in a diverse range of courses to explore my interests such as Computer Graphics and Computer Vision',
       'Strengthened foundational knowledge in computer science through algorithms lab and computational intelligence lab',
       'Conducted research on industrial image synthesis for dataset augmentation',
     ],
-    details: [
-      'Experienced pandemic and lockdown since my second semester',
-      'Discovered my interest in anime and manga because of the lockdown',
-    ],
+    src: 'https://giphy.com/gifs/video-games-mickey-mouse-playing-10mDJCMd5qQjNS',
     keywords: ['Algorithms', 'Machine Learning', 'Computer Graphics', 'Computer Vision'],
   },
   {
@@ -52,13 +49,12 @@ const experiencesData: Experience[] = [
     from: 'Jul 2018 ',
     to: 'Jul 2019',
     location: 'Taipei, Taiwan',
+    meme: '/static/gif/busy.gif',
     descriptions: [
       'Guided four clients across various industries in achieving information security and data protection certifications',
       'Conducted cybersecurity audits and vulnerability assessments to identify and mitigate potential risks',
     ],
-    details: [
-      'Prepared for master application including GRE and TOEFL, and got the driving license during this year',
-    ],
+    src: 'https://giphy.com/gifs/leroypatterson-busy-im-too-l1KVbInIdeFYlsApO',
     keywords: ['cybersecurity', 'consulting', 'audit', 'vulnerability assessment'],
   },
   {
@@ -72,10 +68,8 @@ const experiencesData: Experience[] = [
       'Completed courses for two majors: Information Management and Finance',
       'Exchanged to Leiden University in Netherlands for a semester',
     ],
-    details: [
-      'Joined NTU Star Rain Club and hold events for the autistic children',
-      'Joined Fighting Sports Club and won the third place in the in-house competition',
-    ],
+    meme: '/static/gif/skipClass.gif',
+    src: 'https://giphy.com/gifs/season-10-the-simpsons-10x7-xT5LMTE79kE5670EPm',
     keywords: ['Double Major', 'Information Management', 'Finance', 'Exchange Program'],
   },
 ]
