@@ -6,12 +6,11 @@ const siteMetadata = {
   description: '',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app', // TODO
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog', // TODO
-  socialBanner: '/static/images/twitter-card.png',
+  siteUrl: 'https://tychen.space',
+  siteRepo: 'https://github.com/0xtyc/profile',
   email: 'tingyu.chen@pm.me',
   github: 'https://github.com/0xtyc',
-  linkedin: 'https://www.linkedin.com/ting-yu-chen-ethz',
+  linkedin: 'https://www.linkedin.com/in/ting-yu-chen-ethz/',
   locale: 'en-US',
 }
 
