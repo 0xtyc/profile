@@ -9,12 +9,19 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: 'Taiwan HyperCert Guidebook',
+    description: `Developed a blockchain-based donation platform with Ethereum smart contracts supporting multiple donations in one transaction and event tracking, a Next.js frontend for wallet connections and transactions, and a backend using Moralis to monitor all transactions.`,
+    href: 'https://hypercerts.guide/',
+    from: 'May 2024',
+    to: 'Present',
+  },
+  {
     title: 'Micetopia',
-    description: `Developed Micetopia, a mice collecting game inspired by Frogcrypto, that lets users capture a new mouse every 15 minutes. The game has nearly 500 users and gained attention during Taipei Blockchain Week. We also collaborate with akaSwap during the Lunar New Year to offer a special NFT collection.`,
+    description: `Developed Micetopia, a mice collecting game inspired by Frogcrypto, that lets users capture a new mouse every 15 minutes. We also collaborate with akaSwap during the Lunar New Year to offer a special NFT collection.`,
     imgSrc: '/static/images/micetopia.png',
     href: 'https://www.micetopia.xyz',
     from: 'Dec 2023',
-    to: 'Present',
+    to: 'Apr 2024',
   },
   {
     title: 'Strater',
