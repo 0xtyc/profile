@@ -9,8 +9,9 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'Taiwan HyperCert Guidebook',
+    title: 'Taiwan HyperAwesome Guidebook',
     description: `Developed a blockchain-based donation platform with Ethereum smart contracts supporting multiple donations in one transaction and event tracking, a Next.js frontend for wallet connections and transactions, and a backend using Moralis to monitor all transactions.`,
+    imgSrc: '/static/images/hypercert.png',
     href: 'https://hypercerts.guide/',
     from: 'May 2024',
     to: 'Present',

@@ -18,14 +18,15 @@ const experiencesData: Experience[] = [
     to: 'Jul 2024',
     location: 'Zug, Switzerland',
     descriptions: [
+      'Implemented an intrusion detection system, including creating a new microservice and adapting the current backend and frontend for data integration.',
+      'Developed a geolocation-based geofencing feature using Capacitor for background user detection on both iOS and Android, becoming a major app feature.',
+      'Simplified the device onboarding process with Bluetooth scanning for reading serial numbers and inputting es- sential information directly in the app, improving technician efficiency and user experience.',
       'Enhanced mobile app user experience by implementing a modern interface and a bottom menu, moving away from the traditional burger menu',
-      'Integrated the background geofence in our Capacitor app to improve the accuracy of our emergency detector',
-      'Developed a comprehensive intrusion detection system across the backend and frontend',
-      'Introduced a device onboarding process to allow users to onboard their own devices without any support',
+      'Owned front-end development, managing feature creation, bug fixes, and performance optimizations; wrote com- prehensive tests to ensure high code quality, reliability, and a seamless user experience.',
     ],
     meme: '/static/gif/decrease.gif',
     src: 'https://giphy.com/gifs/season-12-the-simpsons-12x9-3o6MbrACMlFCny8zmw',
-    keywords: ['React', 'Next.js', 'TypeScript', 'Capacitor', 'PostgreSQL', 'Django'],
+    keywords: ['TypeScript', 'Python', 'React', 'Next.js', 'Capacitor', 'PostgreSQL', 'Django'],
   },
 
   {
@@ -41,7 +42,14 @@ const experiencesData: Experience[] = [
       'Conducted research on industrial image synthesis for dataset augmentation',
     ],
     src: 'https://giphy.com/gifs/video-games-mickey-mouse-playing-10mDJCMd5qQjNS',
-    keywords: ['Algorithms', 'Machine Learning', 'Computer Graphics', 'Computer Vision'],
+    keywords: [
+      'C++',
+      'Java',
+      'Algorithms',
+      'Machine Learning',
+      'Computer Graphics',
+      'Computer Vision',
+    ],
   },
   {
     title: 'Cybersecurity Consultant',
