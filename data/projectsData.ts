@@ -9,6 +9,14 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: 'Solid(ar)ity',
+    description: `Collaborated with the designer to develop the landing page that features interactive animation, enhancing user engagement and creating a visually appealing, dynamic experience`,
+    imgSrc: '/static/images/solidarity.png',
+    href: 'https://solidarity.gg/',
+    from: 'Sep 2024',
+    to: 'Present',
+  },
+  {
     title: 'Taiwan HyperAwesome Guidebook',
     description: `Developed a blockchain-based donation platform with Ethereum smart contracts supporting multiple donations in one transaction and event tracking, a Next.js frontend for wallet connections and transactions, and a backend using Moralis to monitor all transactions.`,
     imgSrc: '/static/images/hypercert.png',
