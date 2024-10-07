@@ -14,17 +14,9 @@ export default function ProjectsPage() {
           </h1>
         </div>
         <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
-            {projectsData.map((d) => (
-              <Card
-                key={d.title}
-                title={d.title}
-                description={d.description}
-                imgSrc={d.imgSrc}
-                href={d.href}
-                from={d.from}
-                to={d.to}
-              />
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {projectsData.map((proj, i) => (
+              <Card project={proj} key={i} />
             ))}
           </div>
         </div>

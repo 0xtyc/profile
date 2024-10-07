@@ -1,12 +1,11 @@
 import Image from './Image'
 import Link from './Link'
 
-const Card = ({ title, description, imgSrc, href, from, to }) => (
-  <div className="h-fit max-w-[544px] p-4 md:h-[625px] md:w-1/2">
+const Card = ({ project }) => {
+  const { title, description, imgSrc, href, from, to, keywords } = project
+  return (
     <div
-      className={`${
-        imgSrc && 'h-full'
-      }  overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700`}
+      className={`rounded-md border-2 border-gray-200 border-opacity-60 p-4 dark:border-gray-700 `}
     >
       {imgSrc ? (
         <Image
@@ -22,12 +21,22 @@ const Card = ({ title, description, imgSrc, href, from, to }) => (
         </div>
       )}
 
-      <div className="h-fit p-6 md:h-[300px]">
+      <div className="h-fit p-6">
         <Link className="mb-1 text-2xl font-bold leading-8 tracking-tight" href={href}>
           {title}
         </Link>
         <p className="mb-2 text-gray-400 dark:text-gray-500">{`${from}${to ? ` - ${to}` : ''}`}</p>
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+        <div className="flex w-fit max-w-fit flex-wrap gap-x-2 pb-2">
+          {keywords.map((keyword, i) => (
+            <span
+              key={i}
+              className="mb-2 rounded-xl bg-gray-300 bg-opacity-40 px-2 py-1 text-sm text-gray-600  dark:text-gray-200"
+            >
+              {keyword}
+            </span>
+          ))}
+        </div>
         {href && (
           <Link
             href={href}
@@ -39,7 +48,7 @@ const Card = ({ title, description, imgSrc, href, from, to }) => (
         )}
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Card

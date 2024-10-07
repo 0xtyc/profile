@@ -5,6 +5,7 @@ interface Project {
   to?: string
   href?: string
   imgSrc?: string
+  keywords: string[]
 }
 
 const projectsData: Project[] = [
@@ -15,14 +16,24 @@ const projectsData: Project[] = [
     href: 'https://solidarity.gg/',
     from: 'Sep 2024',
     to: 'Present',
+    keywords: ['TypeScript', 'Tailwind CSS', 'Next.js', 'anime.js', 'splitting.js'],
   },
   {
     title: 'Taiwan HyperAwesome Guidebook',
-    description: `Developed a blockchain-based donation platform with Ethereum smart contracts supporting multiple donations in one transaction and event tracking, a Next.js frontend for wallet connections and transactions, and a backend using Moralis to monitor all transactions.`,
+    description: `Developed a blockchain-based donation platform with smart contracts on Optimism chain while supporting multiple donations in one transaction.`,
     imgSrc: '/static/images/hypercert.png',
     href: 'https://hypercerts.guide/',
     from: 'May 2024',
     to: 'Present',
+    keywords: [
+      'TypeScript',
+      'node.js',
+      'Solidity',
+      'Next.js',
+      'express.js',
+      'ethers.js',
+      'Moralis',
+    ],
   },
   {
     title: 'Micetopia',
@@ -31,6 +42,7 @@ const projectsData: Project[] = [
     href: 'https://www.micetopia.xyz',
     from: 'Dec 2023',
     to: 'Apr 2024',
+    keywords: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Firebase'],
   },
   {
     title: 'Strater',
@@ -38,6 +50,8 @@ const projectsData: Project[] = [
     imgSrc: '/static/images/strater.png',
     href: 'https://www.strater.xyz',
     from: 'Jan 2024',
+    to: 'Feb 2024',
+    keywords: ['TypeScript', 'Next.js'],
   },
   {
     title: 'Industrial Image Synthesis for Dataset Augmentation',
@@ -47,6 +61,7 @@ const projectsData: Project[] = [
     from: 'Apr 2021',
     to: 'Nov 2021',
     href: '/static/files/thesis.pdf',
+    keywords: ['Python', 'PyTorch', 'Generative Adversarial Network', 'Computer Vision'],
   },
   {
     title: 'Physically Based Rendering',
@@ -54,6 +69,7 @@ const projectsData: Project[] = [
     imgSrc: '/static/images/rendering.png',
     from: 'Sep 2020',
     to: 'Dec 2020',
+    keywords: ['C++', 'Nori', 'Computer Graphics'],
   },
 ]
 
