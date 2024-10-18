@@ -9,8 +9,8 @@ const BackgroundAnimation = () => {
 
   useEffect(() => {
     if (typeof window === 'undefined') return
-    const h = window.innerHeight - 100
-    const w = window.innerWidth - 100
+    const h = window.innerHeight
+    const w = window.innerWidth
     const engine = Matter.Engine.create({ gravity: { x: 0.05, y: 0.2 } })
     const runner = Matter.Runner.create()
     const { Render, World, Bodies } = Matter

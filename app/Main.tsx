@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        <div className="fixed left-10 top-20 z-[-1]">
+        <div className="fixed left-0 top-0 z-[-1]">
           <BackgroundAnimation />
         </div>
       </Suspense>
