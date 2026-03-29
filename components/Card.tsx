@@ -1,7 +1,8 @@
 import Image from './Image'
 import Link from './Link'
+import { Project } from '@/data/projectsData'
 
-const Card = ({ project }) => {
+const Card = ({ project }: { project: Project }) => {
   const { title, description, imgSrc, href, from, to, keywords } = project
   return (
     <div
@@ -22,9 +23,13 @@ const Card = ({ project }) => {
       )}
 
       <div className="h-fit p-6">
-        <Link className="mb-1 text-2xl font-bold leading-8 tracking-tight" href={href}>
-          {title}
-        </Link>
+        {href ? (
+          <Link className="mb-1 text-2xl font-bold leading-8 tracking-tight" href={href}>
+            {title}
+          </Link>
+        ) : (
+          <span className="mb-1 text-2xl font-bold leading-8 tracking-tight">{title}</span>
+        )}
         <p className="mb-2 text-gray-400 dark:text-gray-500">{`${from}${to ? ` - ${to}` : ''}`}</p>
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
         <div className="flex w-fit max-w-fit flex-wrap gap-x-2 pb-2">
