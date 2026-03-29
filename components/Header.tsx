@@ -1,7 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
-import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
@@ -21,17 +19,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-        {/* {headerNavLinks.map((link) => (
-          <Link
-            key={link.title}
-            href={link.href}
-            className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
-          >
-            {link.title}
-          </Link>
-        ))} */}
         <ThemeSwitch />
-        {/* <MobileNav /> */}
       </div>
     </header>
   )
