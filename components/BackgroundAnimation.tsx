@@ -91,6 +91,12 @@ const BackgroundAnimation = () => {
     World.add(engine.world, [floor, ...balls, ...cubes, ...blocks])
     Runner.run(runner, engine)
     Render.run(render)
+
+    return () => {
+      Render.stop(render)
+      Runner.stop(runner)
+      Matter.Engine.clear(engine)
+    }
   }, [])
 
   return (
