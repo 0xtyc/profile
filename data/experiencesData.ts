@@ -12,6 +12,29 @@ interface Experience {
 
 const experiencesData: Experience[] = [
   {
+    title: 'Software Engineer',
+    company: 'Google',
+    from: 'Sep 2025',
+    to: 'Present',
+    location: 'Zurich, Switzerland',
+    descriptions: [
+      'Working on YouTube Feed Ads, building and optimizing ad serving systems that power recommendations and monetization at scale.',
+    ],
+    keywords: ['Google', 'YouTube', 'Ads', 'Feed', 'Large Scale Systems'],
+  },
+  {
+    title: 'Backend Engineer',
+    company: 'Optravis',
+    from: 'Feb 2025',
+    to: 'Aug 2025',
+    location: 'Basel, Switzerland',
+    descriptions: [
+      'Developed backend services for a SaaS platform automating transfer pricing processes for multinational enterprises.',
+      'Built and maintained APIs and business logic supporting transfer price calculation, year-end adjustments, and ERP integrations.',
+    ],
+    keywords: ['Kotlin', 'Backend', 'SaaS', 'Transfer Pricing', 'ERP Integration'],
+  },
+  {
     title: 'FullStack Software Engineer',
     company: 'Sedimentum AG',
     from: 'Apr 2022',
