@@ -15,8 +15,8 @@ export default function ProjectsPage() {
         </div>
         <div className="container py-12">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {projectsData.map((proj, i) => (
-              <Card project={proj} key={i} />
+            {projectsData.map((proj) => (
+              <Card project={proj} key={proj.title} />
             ))}
           </div>
         </div>

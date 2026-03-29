@@ -33,9 +33,9 @@ const Card = ({ project }: { project: Project }) => {
         <p className="mb-2 text-gray-400 dark:text-gray-500">{`${from}${to ? ` - ${to}` : ''}`}</p>
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
         <div className="flex w-fit max-w-fit flex-wrap gap-x-2 pb-2">
-          {keywords.map((keyword, i) => (
+          {keywords.map((keyword) => (
             <span
-              key={i}
+              key={keyword}
               className="mb-2 rounded-xl bg-gray-300 bg-opacity-40 px-2 py-1 text-sm text-gray-600  dark:text-gray-200"
             >
               {keyword}

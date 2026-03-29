@@ -25,7 +25,7 @@ export default function ExperiencesPage() {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {experiencesData.map((exp, i) => {
             return (
-              <li key={i} className="py-12">
+              <li key={exp.company} className="py-12">
                 <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dd className="text-base font-medium leading-6 text-gray-600 dark:text-gray-300">
@@ -41,8 +41,8 @@ export default function ExperiencesPage() {
                         <h2 className="text-2xl font-bold leading-8 tracking-tight">{`${exp.title} • ${exp.company}`}</h2>
                       </div>
                       <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                        {exp.descriptions.map((desc, i) => (
-                          <p key={i}>{desc}</p>
+                        {exp.descriptions.map((desc) => (
+                          <p key={desc}>{desc}</p>
                         ))}
                         {views[i] && exp.meme && (
                           <div className="flex flex-col">
@@ -77,9 +77,9 @@ export default function ExperiencesPage() {
                       )}
                     </div>
                     <div className="flex w-fit max-w-fit flex-wrap">
-                      {exp.keywords?.map((keyword, i) => (
+                      {exp.keywords?.map((keyword) => (
                         <span
-                          key={i}
+                          key={keyword}
                           className="m-1 rounded-xl bg-gray-300 bg-opacity-40 px-4 py-1 text-gray-600  dark:text-gray-200"
                         >
                           {keyword}
