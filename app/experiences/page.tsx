@@ -72,7 +72,7 @@ export default function ExperiencesPage() {
                           role="button"
                           className="cursor-pointer text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                         >
-                          {!views[i] ? 'Behind the Scnenes' : "Don't Care"}
+                          {!views[i] ? 'Behind the Scenes' : "Don't Care"}
                         </div>
                       )}
                     </div>
