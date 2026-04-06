@@ -60,8 +60,7 @@ function Particles({ isDark }: { isDark: boolean }) {
     []
   )
   const colorVariations = useMemo(
-    () =>
-      Array.from({ length: PARTICLE_COUNT * 3 }, () => (Math.random() - 0.5) * 0.08),
+    () => Array.from({ length: PARTICLE_COUNT * 3 }, () => (Math.random() - 0.5) * 0.08),
     []
   )
 

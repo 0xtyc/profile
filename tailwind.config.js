@@ -28,7 +28,7 @@ module.exports = {
         primary: colors.pink,
         gray: colors.gray,
       },
-      typography: ({ theme }) => ({
+      typography: (/** @type {any} */ { theme }) => ({
         DEFAULT: {
           css: {
             a: {

@@ -65,7 +65,7 @@
     "@algolia/requester-common" "4.23.2"
     "@algolia/transporter" "4.23.2"
 
-"@algolia/client-search@4.23.2":
+"@algolia/client-search@>= 4.9.1 < 6", "@algolia/client-search@4.23.2":
   version "4.23.2"
   dependencies:
     "@algolia/client-common" "4.23.2"
@@ -119,11 +119,11 @@
   version "5.2.0"
 
 "@babel/runtime@^7.13.10", "@babel/runtime@^7.17.8", "@babel/runtime@^7.23.2":
-  version "7.29.2"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.29.2.tgz"
-  integrity sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==
+  version "7.24.1"
+  dependencies:
+    regenerator-runtime "^0.14.0"
 
-"@citation-js/core@^0.7.1":
+"@citation-js/core@^0.7.0", "@citation-js/core@^0.7.1":
   version "0.7.9"
   dependencies:
     "@citation-js/date" "^0.5.0"
@@ -250,7 +250,7 @@
     "@docsearch/css" "3.6.0"
     algoliasearch "^4.19.1"
 
-"@effect-ts/core@^0.60.5":
+"@effect-ts/core@^0.60.2", "@effect-ts/core@^0.60.5":
   version "0.60.5"
   dependencies:
     "@effect-ts/system" "^0.57.5"
@@ -468,14 +468,26 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@opentelemetry/api-logs@0.48.0":
+"@opentelemetry/api-logs@>=0.38.0", "@opentelemetry/api-logs@0.39.1":
+  version "0.39.1"
+  resolved "https://registry.npmjs.org/@opentelemetry/api-logs/-/api-logs-0.39.1.tgz"
+  integrity sha512-9BJ8lMcOzEN0lu+Qji801y707oFO4xT3db6cosPvl+k7ItUHKN5ofWqtSbM9gbt1H4JJ/4/2TVrqI9Rq7hNv6Q==
+  dependencies:
+    "@opentelemetry/api" "^1.0.0"
+
+"@opentelemetry/api-logs@>=0.39.1", "@opentelemetry/api-logs@0.48.0":
   version "0.48.0"
   resolved "https://registry.npmjs.org/@opentelemetry/api-logs/-/api-logs-0.48.0.tgz"
   integrity sha512-1/aMiU4Eqo3Zzpfwu51uXssp5pzvHFObk8S9pKAiXb1ne8pvg1qxBQitYL1XUiAMEXFzgjaidYG2V6624DRhhw==
   dependencies:
     "@opentelemetry/api" "^1.0.0"
 
-"@opentelemetry/api@^1.0.0", "@opentelemetry/api@^1.7.0":
+"@opentelemetry/api@^1.0.0", "@opentelemetry/api@^1.1.0", "@opentelemetry/api@^1.4.0", "@opentelemetry/api@>=1.0.0 <1.5.0", "@opentelemetry/api@>=1.0.0 <1.8.0", "@opentelemetry/api@>=1.0.0 <1.9.0", "@opentelemetry/api@>=1.3.0 <1.5.0", "@opentelemetry/api@>=1.4.0 <1.5.0":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-1.4.1.tgz"
+  integrity sha512-O2yRJce1GOc6PAy3QxFM4NzFiWzvScDC1/5ihYBL6BUEVdq0XMWN01sppE+H6bBXbaFYipjwFLEWLg5PaSOThA==
+
+"@opentelemetry/api@^1.7.0", "@opentelemetry/api@>=1.3.0 <1.8.0", "@opentelemetry/api@>=1.4.0 <1.8.0":
   version "1.9.0"
   resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-1.9.0.tgz"
   integrity sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==
@@ -483,15 +495,34 @@
 "@opentelemetry/context-async-hooks@1.22.0":
   version "1.22.0"
 
-"@opentelemetry/core@^1.21.0", "@opentelemetry/core@1.21.0":
+"@opentelemetry/core@^1.13.0", "@opentelemetry/core@^1.21.0", "@opentelemetry/core@1.21.0":
   version "1.21.0"
   dependencies:
     "@opentelemetry/semantic-conventions" "1.21.0"
+
+"@opentelemetry/core@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.npmjs.org/@opentelemetry/core/-/core-1.13.0.tgz"
+  integrity sha512-2dBX3Sj99H96uwJKvc2w9NOiNgbvAO6mOFJFramNkKfS9O4Um+VWgpnlAazoYjT6kUJ1MP70KQ5ngD4ed+4NUw==
+  dependencies:
+    "@opentelemetry/semantic-conventions" "1.13.0"
 
 "@opentelemetry/core@1.22.0":
   version "1.22.0"
   dependencies:
     "@opentelemetry/semantic-conventions" "1.22.0"
+
+"@opentelemetry/exporter-trace-otlp-grpc@^0.39.0":
+  version "0.39.1"
+  resolved "https://registry.npmjs.org/@opentelemetry/exporter-trace-otlp-grpc/-/exporter-trace-otlp-grpc-0.39.1.tgz"
+  integrity sha512-l5RhLKx6U+yuLhMrtgavTDthX50E1mZM3/SSySC7OPZiArFHV/b/9x9jxAzrOgIQUDxyj4N0V9aLKSA2t7Qzxg==
+  dependencies:
+    "@grpc/grpc-js" "^1.7.1"
+    "@opentelemetry/core" "1.13.0"
+    "@opentelemetry/otlp-grpc-exporter-base" "0.39.1"
+    "@opentelemetry/otlp-transformer" "0.39.1"
+    "@opentelemetry/resources" "1.13.0"
+    "@opentelemetry/sdk-trace-base" "1.13.0"
 
 "@opentelemetry/exporter-trace-otlp-grpc@^0.48.0":
   version "0.48.0"
@@ -505,12 +536,29 @@
     "@opentelemetry/resources" "1.21.0"
     "@opentelemetry/sdk-trace-base" "1.21.0"
 
+"@opentelemetry/otlp-exporter-base@0.39.1":
+  version "0.39.1"
+  resolved "https://registry.npmjs.org/@opentelemetry/otlp-exporter-base/-/otlp-exporter-base-0.39.1.tgz"
+  integrity sha512-Pv5X8fbi6jD/RJBePyn7MnCSuE6MbPB6dl+7YYBWJ5RcMGYMwvLXjd4h2jWsPV2TSUg38H/RoSP0aXvQ06Y7iw==
+  dependencies:
+    "@opentelemetry/core" "1.13.0"
+
 "@opentelemetry/otlp-exporter-base@0.48.0":
   version "0.48.0"
   resolved "https://registry.npmjs.org/@opentelemetry/otlp-exporter-base/-/otlp-exporter-base-0.48.0.tgz"
   integrity sha512-T4LJND+Ugl87GUONoyoQzuV9qCn4BFIPOnCH1biYqdGhc2JahjuLqVD9aefwLzGBW638iLAo88Lh68h2F1FLiA==
   dependencies:
     "@opentelemetry/core" "1.21.0"
+
+"@opentelemetry/otlp-grpc-exporter-base@0.39.1":
+  version "0.39.1"
+  resolved "https://registry.npmjs.org/@opentelemetry/otlp-grpc-exporter-base/-/otlp-grpc-exporter-base-0.39.1.tgz"
+  integrity sha512-u3ErFRQqQFKjjIMuwLWxz/tLPYInfmiAmSy//fGSCzCh2ZdJgqQjMOAxBgqFtCF2xFL+OmMhyuC2ThMzceGRWA==
+  dependencies:
+    "@grpc/grpc-js" "^1.7.1"
+    "@opentelemetry/core" "1.13.0"
+    "@opentelemetry/otlp-exporter-base" "0.39.1"
+    protobufjs "^7.2.2"
 
 "@opentelemetry/otlp-grpc-exporter-base@0.48.0":
   version "0.48.0"
@@ -521,6 +569,18 @@
     "@opentelemetry/core" "1.21.0"
     "@opentelemetry/otlp-exporter-base" "0.48.0"
     protobufjs "^7.2.3"
+
+"@opentelemetry/otlp-transformer@0.39.1":
+  version "0.39.1"
+  resolved "https://registry.npmjs.org/@opentelemetry/otlp-transformer/-/otlp-transformer-0.39.1.tgz"
+  integrity sha512-0hgVnXXz5efI382B/24NxD4b6Zxlh7nxCdJkxkdmQMbn0yRiwoq/ZT+QG8eUL6JNzsBAV1WJlF5aJNsL8skHvw==
+  dependencies:
+    "@opentelemetry/api-logs" "0.39.1"
+    "@opentelemetry/core" "1.13.0"
+    "@opentelemetry/resources" "1.13.0"
+    "@opentelemetry/sdk-logs" "0.39.1"
+    "@opentelemetry/sdk-metrics" "1.13.0"
+    "@opentelemetry/sdk-trace-base" "1.13.0"
 
 "@opentelemetry/otlp-transformer@0.48.0":
   version "0.48.0"
@@ -550,11 +610,27 @@
     "@opentelemetry/core" "1.21.0"
     "@opentelemetry/semantic-conventions" "1.21.0"
 
+"@opentelemetry/resources@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.npmjs.org/@opentelemetry/resources/-/resources-1.13.0.tgz"
+  integrity sha512-euqjOkiN6xhjE//0vQYGvbStxoD/WWQRhDiO0OTLlnLBO9Yw2Gd/VoSx2H+svsebjzYk5OxLuREBmcdw6rbUNg==
+  dependencies:
+    "@opentelemetry/core" "1.13.0"
+    "@opentelemetry/semantic-conventions" "1.13.0"
+
 "@opentelemetry/resources@1.22.0":
   version "1.22.0"
   dependencies:
     "@opentelemetry/core" "1.22.0"
     "@opentelemetry/semantic-conventions" "1.22.0"
+
+"@opentelemetry/sdk-logs@0.39.1":
+  version "0.39.1"
+  resolved "https://registry.npmjs.org/@opentelemetry/sdk-logs/-/sdk-logs-0.39.1.tgz"
+  integrity sha512-/gmgKfZ1ZVFporKuwsewqIyvaUIGpv76JZ7lBpHQQPb37IMpaXO6pdqFI4ebHAWfNIm3akMyhmdtzivcgF3lgw==
+  dependencies:
+    "@opentelemetry/core" "1.13.0"
+    "@opentelemetry/resources" "1.13.0"
 
 "@opentelemetry/sdk-logs@0.48.0":
   version "0.48.0"
@@ -563,6 +639,15 @@
   dependencies:
     "@opentelemetry/core" "1.21.0"
     "@opentelemetry/resources" "1.21.0"
+
+"@opentelemetry/sdk-metrics@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.npmjs.org/@opentelemetry/sdk-metrics/-/sdk-metrics-1.13.0.tgz"
+  integrity sha512-MOjZX6AnSOqLliCcZUrb+DQKjAWXBiGeICGbHAGe5w0BB18PJIeIo995lO5JSaFfHpmUMgJButTPfJJD27W3Vg==
+  dependencies:
+    "@opentelemetry/core" "1.13.0"
+    "@opentelemetry/resources" "1.13.0"
+    lodash.merge "4.6.2"
 
 "@opentelemetry/sdk-metrics@1.21.0":
   version "1.21.0"
@@ -573,12 +658,21 @@
     "@opentelemetry/resources" "1.21.0"
     lodash.merge "^4.6.2"
 
-"@opentelemetry/sdk-trace-base@^1.21.0", "@opentelemetry/sdk-trace-base@1.21.0":
+"@opentelemetry/sdk-trace-base@^1.13.0", "@opentelemetry/sdk-trace-base@^1.21.0", "@opentelemetry/sdk-trace-base@1.21.0":
   version "1.21.0"
   dependencies:
     "@opentelemetry/core" "1.21.0"
     "@opentelemetry/resources" "1.21.0"
     "@opentelemetry/semantic-conventions" "1.21.0"
+
+"@opentelemetry/sdk-trace-base@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.npmjs.org/@opentelemetry/sdk-trace-base/-/sdk-trace-base-1.13.0.tgz"
+  integrity sha512-moTiQtc0uPR1hQLt6gLDJH9IIkeBhgRb71OKjNHZPE1VF45fHtD6nBDi5J/DkTHTwYP5X3kBJLa3xN7ub6J4eg==
+  dependencies:
+    "@opentelemetry/core" "1.13.0"
+    "@opentelemetry/resources" "1.13.0"
+    "@opentelemetry/semantic-conventions" "1.13.0"
 
 "@opentelemetry/sdk-trace-base@1.22.0":
   version "1.22.0"
@@ -587,7 +681,7 @@
     "@opentelemetry/resources" "1.22.0"
     "@opentelemetry/semantic-conventions" "1.22.0"
 
-"@opentelemetry/sdk-trace-node@^1.21.0":
+"@opentelemetry/sdk-trace-node@^1.13.0", "@opentelemetry/sdk-trace-node@^1.21.0":
   version "1.22.0"
   dependencies:
     "@opentelemetry/context-async-hooks" "1.22.0"
@@ -599,6 +693,11 @@
 
 "@opentelemetry/semantic-conventions@^1.21.0", "@opentelemetry/semantic-conventions@1.21.0":
   version "1.21.0"
+
+"@opentelemetry/semantic-conventions@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.npmjs.org/@opentelemetry/semantic-conventions/-/semantic-conventions-1.13.0.tgz"
+  integrity sha512-LMGqfSZkaMQXqewO0o1wvWr/2fQdCh4a3Sqlxka/UsJCe0cfLulh6x2aqnKLnsrSGiCq5rSCwvINd152i0nCqw==
 
 "@opentelemetry/semantic-conventions@1.22.0":
   version "1.22.0"
@@ -807,8 +906,10 @@
   resolved "https://registry.npmjs.org/@types/react-reconciler/-/react-reconciler-0.28.9.tgz"
   integrity sha512-HHM3nxyUZ3zAylX8ZEyrDNd2XZOnQ0D5XfunJF5FLQnZbHHYq4UWvW1QfelQNXv1ICNkwYhfxjwfnqivYB6bFg==
 
-"@types/react@*", "@types/react@^18.2.73":
+"@types/react@*", "@types/react@^18.2.73", "@types/react@>= 16.8.0 < 19.0.0":
   version "18.2.73"
+  resolved "https://registry.npmjs.org/@types/react/-/react-18.2.73.tgz"
+  integrity sha512-XcGdod0Jjv84HOC7N5ziY3x+qL0AfmubvKOZ9hJjJ2yd5EE+KYjWhdOjt387e9HPheHkdggF9atTifMRtyAaRA==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -869,7 +970,7 @@
     semver "^7.5.4"
     ts-api-utils "^1.0.1"
 
-"@typescript-eslint/parser@^5.4.2 || ^6.0.0", "@typescript-eslint/parser@^6.1.0":
+"@typescript-eslint/parser@^5.4.2 || ^6.0.0", "@typescript-eslint/parser@^6.0.0 || ^6.0.0-alpha", "@typescript-eslint/parser@^6.1.0":
   version "6.21.0"
   dependencies:
     "@typescript-eslint/scope-manager" "6.21.0"
@@ -938,7 +1039,7 @@ acorn-jsx@^5.0.0, acorn-jsx@^5.3.2:
 acorn-walk@^8.0.0:
   version "8.3.2"
 
-acorn@^8.0.0, acorn@^8.0.4, acorn@^8.9.0:
+"acorn@^6.0.0 || ^7.0.0 || ^8.0.0", acorn@^8.0.0, acorn@^8.0.4, acorn@^8.9.0:
   version "8.11.3"
 
 ajv@^6.12.4:
@@ -949,7 +1050,7 @@ ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-algoliasearch@^4.19.1:
+algoliasearch@^4.19.1, "algoliasearch@>= 4.9.1 < 6":
   version "4.23.2"
   dependencies:
     "@algolia/cache-browser-local-storage" "4.23.2"
@@ -1181,7 +1282,7 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-browserslist@^4.23.0:
+browserslist@^4.23.0, "browserslist@>= 4.21.0":
   version "4.23.0"
   dependencies:
     caniuse-lite "^1.0.30001587"
@@ -1544,6 +1645,11 @@ emoji-regex@^8.0.0:
 emoji-regex@^9.2.2:
   version "9.2.2"
 
+encoding@^0.1.0:
+  version "0.1.13"
+  dependencies:
+    iconv-lite "^0.6.2"
+
 enhanced-resolve@^5.12.0:
   version "5.16.0"
   dependencies:
@@ -1653,7 +1759,7 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-"esbuild@0.17.x || 0.18.x || 0.19.x || 0.20.x":
+esbuild@*, esbuild@>=0.14.0, esbuild@0.*, "esbuild@0.17.x || 0.18.x || 0.19.x || 0.20.x":
   version "0.20.2"
   optionalDependencies:
     "@esbuild/aix-ppc64" "0.20.2"
@@ -1702,7 +1808,7 @@ eslint-config-next@14.1.0:
     eslint-plugin-react "^7.33.2"
     eslint-plugin-react-hooks "^4.5.0 || 5.0.0-canary-7118f5dd7-20230705"
 
-eslint-config-prettier@^8.8.0:
+eslint-config-prettier@*, eslint-config-prettier@^8.8.0:
   version "8.10.0"
 
 eslint-import-resolver-node@^0.3.6, eslint-import-resolver-node@^0.3.9:
@@ -1728,7 +1834,7 @@ eslint-module-utils@^2.7.4, eslint-module-utils@^2.8.0:
   dependencies:
     debug "^3.2.7"
 
-eslint-plugin-import@^2.28.1:
+eslint-plugin-import@*, eslint-plugin-import@^2.28.1:
   version "2.29.1"
   dependencies:
     array-includes "^3.1.7"
@@ -1809,7 +1915,7 @@ eslint-scope@^7.2.2:
 eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4.1, eslint-visitor-keys@^3.4.3:
   version "3.4.3"
 
-eslint@^8.45.0:
+eslint@*, "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || >=8.0.0", "eslint@^7.0.0 || ^8.0.0", "eslint@^7.23.0 || ^8.0.0", eslint@^8.45.0, eslint@>=7.0.0, eslint@>=8.0.0:
   version "8.57.0"
   dependencies:
     "@eslint-community/eslint-utils" "^4.2.0"
@@ -2476,6 +2582,11 @@ iconv-lite@^0.4.4:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
+iconv-lite@^0.6.2:
+  version "0.6.3"
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3.0.0"
+
 ieee754@^1.1.13, ieee754@^1.2.1:
   version "1.2.1"
 
@@ -2861,7 +2972,7 @@ lodash.castarray@^4.4.0:
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
 
-lodash.merge@^4.6.2:
+lodash.merge@^4.6.2, lodash.merge@4.6.2:
   version "4.6.2"
 
 log-update@^5.0.1:
@@ -3524,7 +3635,7 @@ next-contentlayer2@^0.4.4, next-contentlayer2@0.4.4:
 next-themes@^0.3.0:
   version "0.3.0"
 
-next@14.1.4:
+"next@^12 || ^13 || ^14", next@>=13.0.0, next@14.1.4:
   version "14.1.4"
   dependencies:
     "@next/env" "14.1.4"
@@ -3821,7 +3932,7 @@ postcss-selector-parser@6.0.10:
 postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   version "4.2.0"
 
-postcss@^8.4.23:
+postcss@^8.0.0, postcss@^8.1.0, postcss@^8.2.14, postcss@^8.4.21, postcss@^8.4.23, postcss@>=8.0.9:
   version "8.4.38"
   dependencies:
     nanoid "^3.3.7"
@@ -3846,7 +3957,7 @@ prettier-linter-helpers@^1.0.0:
 prettier-plugin-tailwindcss@^0.5.11:
   version "0.5.13"
 
-prettier@^3.0.0:
+prettier@^3.0, prettier@^3.0.0, prettier@>=3.0.0:
   version "3.2.5"
 
 probe-image-size@^7.2.3:
@@ -3869,7 +3980,7 @@ prop-types@^15.8.1:
 property-information@^6.0.0:
   version "6.4.1"
 
-protobufjs@^7.2.3, protobufjs@^7.2.5:
+protobufjs@^7.2.2, protobufjs@^7.2.3, protobufjs@^7.2.5:
   version "7.4.0"
   resolved "https://registry.npmjs.org/protobufjs/-/protobufjs-7.4.0.tgz"
   integrity sha512-mRUWCc3KUU4w1jU8sGxICXH/gNS94DvI1gxqDvBzhj1JpcsimQkYiOJfwsPUykUI5ZaspFbSgmBLER8IrQ3tqw==
@@ -3898,7 +4009,7 @@ qs@^6.5.1:
 queue-microtask@^1.2.2:
   version "1.2.3"
 
-react-dom@18.2.0:
+react-dom@*, "react-dom@^16 || ^17 || ^18", "react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^16.8 || ^17 || ^18", "react-dom@^16.8 || ^17.0 || ^18.0", "react-dom@^17.0.2 || ^18.0.0", react-dom@^18.2.0, "react-dom@>= 16.8.0 < 19.0.0", react-dom@>=16.13, "react-dom@>=18 <19", react-dom@18.2.0:
   version "18.2.0"
   dependencies:
     loose-envify "^1.1.0"
@@ -3925,7 +4036,7 @@ react-virtual@^2.8.2:
   dependencies:
     "@reach/observe-rect" "^1.1.0"
 
-react@18.2.0:
+react@*, "react@^16 || ^17 || ^18", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.6.3 || ^17.0.0", "react@^16.8 || ^17 || ^18", "react@^16.8 || ^17.0 || ^18.0", "react@^17.0.2 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0 < 19.0.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16.13, react@>=16.8, react@>=17.0, "react@>=18 <19", react@>=18.0, react@18.2.0:
   version "18.2.0"
   dependencies:
     loose-envify "^1.1.0"
@@ -3977,6 +4088,9 @@ refractor@^4.8.0:
     "@types/prismjs" "^1.0.0"
     hastscript "^7.0.0"
     parse-entities "^4.0.0"
+
+regenerator-runtime@^0.14.0:
+  version "0.14.1"
 
 regexp.prototype.flags@^1.5.2:
   version "1.5.2"
@@ -4405,7 +4519,7 @@ safe-regex-test@^1.0.3:
     es-errors "^1.3.0"
     is-regex "^1.1.4"
 
-"safer-buffer@>= 2.1.2 < 3":
+"safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0":
   version "2.1.2"
 
 sax@^1.2.4:
@@ -4422,6 +4536,11 @@ scheduler@^0.23.0:
   version "0.23.0"
   dependencies:
     loose-envify "^1.1.0"
+
+"search-insights@>= 1 < 3":
+  version "2.17.2"
+  resolved "https://registry.npmjs.org/search-insights/-/search-insights-2.17.2.tgz"
+  integrity sha512-zFNpOpUO+tY2D85KrxJ+aqwnIfdEGi06UH2+xEb+Bp9Mwznmauqc9djbnBibJO5mpfUPPa8st6Sx65+vbeO45g==
 
 section-matter@^1.0.0:
   version "1.0.0"
@@ -4704,7 +4823,7 @@ synckit@^0.8.6:
     "@pkgr/core" "^0.1.0"
     tslib "^2.6.2"
 
-tailwindcss@^3.4.3:
+tailwindcss@^3.4.3, "tailwindcss@>=3.0.0 || >= 3.0.0-alpha.1", "tailwindcss@>=3.0.0 || insiders":
   version "3.4.3"
   dependencies:
     "@alloc/quick-lru" "^5.2.0"
@@ -4746,7 +4865,7 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
-three@^0.183.2:
+three@^0.183.2, three@>=0.133:
   version "0.183.2"
   resolved "https://registry.npmjs.org/three/-/three-0.183.2.tgz"
   integrity sha512-di3BsL2FEQ1PA7Hcvn4fyJOlxRRgFYBpMTcyOgkwJIaDOdJMebEFPA+t98EvjuljDx4hNulAGwF6KIjtwI5jgQ==
@@ -4853,7 +4972,7 @@ typed-array-length@^1.0.6:
     is-typed-array "^1.1.13"
     possible-typed-array-names "^1.0.0"
 
-typescript@^5.1.3:
+typescript@^5.1.3, typescript@>=3.3.1, typescript@>=4.2.0:
   version "5.4.3"
 
 uglify-js@^3.0.0:
