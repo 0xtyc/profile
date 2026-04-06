@@ -3,16 +3,15 @@ import ExperiencesPage from './experiences/page'
 import ProjectsPage from './projects/page'
 import { lazy, Suspense } from 'react'
 import ErrorBoundary from '../components/ErrorBoundary'
-const BackgroundAnimation = lazy(() => import('../components/BackgroundAnimation'))
+
+const ParticleCloud3D = lazy(() => import('../components/backgrounds/ParticleCloud3D'))
 
 export default function Home() {
   return (
     <>
       <ErrorBoundary>
         <Suspense fallback={null}>
-          <div className="fixed left-0 top-0 z-[-1]">
-            <BackgroundAnimation />
-          </div>
+          <ParticleCloud3D />
         </Suspense>
       </ErrorBoundary>
       <AboutPage />
